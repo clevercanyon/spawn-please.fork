@@ -1,50 +1,53 @@
-const spawn = require('cross-spawn')
+module.exports = (command, args, stdin, options) => {
+	if (!options && typeof stdin === 'object') {
+		options = stdin;
+		stdin = undefined;
+	}
+	options = options || {};
 
-const spawnPlease = (command, args, stdin, options) => {
-  // if there are only three arguments and the third argument is an object, treat it as the options object and set stdin to null
-  if (!options && typeof stdin === 'object') {
-    options = stdin
-    stdin = undefined
-  }
+	if (undefined === options.rejectOnError) {
+		options.rejectOnError = true;
+	}
+	let stdout = ''; // Initialize.
+	let stderr = ''; // Initialize.
 
-  // defaults
-  options = options || {}
-  if (options.rejectOnError === undefined) {
-    options.rejectOnError = true
-  }
+	const child = require('cross-spawn')(command, args, options);
 
-  let stdout = ''
-  let stderr = ''
-  const child = spawn(command, args, options)
+	return new Promise((resolve, reject) => {
+		if (stdin !== undefined && stdin !== null && child.stdin) {
+			child.stdin.write(stdin);
+		}
+		if (child.stdin) child.stdin.end();
 
-  return new Promise((resolve, reject) => {
-    if (stdin !== undefined && stdin !== null) {
-      child.stdin.write(stdin)
-    }
-    child.stdin.end()
+		if (child.stdout) {
+			child.stdout.on('data', (data) => {
+				stdout += data;
 
-    child.stdout.on('data', data => {
-      stdout += data
-      if (options.stdout) options.stdout(data)
-    })
+				if (options.stdout) {
+					options.stdout(data);
+				}
+			});
+		}
 
-    child.stderr.on('data', data => {
-      stderr += data
-      if (options.stderr) options.stderr(data)
-    })
+		if (child.stderr) {
+			child.stderr.on('data', (data) => {
+				stderr += data;
 
-    if (options.rejectOnError) {
-      child.addListener('error', reject)
-    }
+				if (options.stderr) {
+					options.stderr(data);
+				}
+			});
+		}
 
-    child.on('close', code => {
-      if (code !== 0 && options.rejectOnError) {
-        reject(stderr)
-      } else {
-        resolve(stdout)
-      }
-    })
-  })
-}
-
-module.exports = spawnPlease
+		if (options.rejectOnError) {
+			child.addListener('error', reject);
+		}
+		child.on('close', (code) => {
+			if (0 !== code && options.rejectOnError) {
+				reject(stderr);
+			} else {
+				resolve(stdout);
+			}
+		});
+	});
+};
