@@ -4,7 +4,7 @@
     "access": "public"
   },
   "license": "ISC",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "name": "@clevercanyon/spawn-please.fork",
   "description": "Promisified child_process.spawn.",
   "repository": "https://github.com/clevercanyon/spawn-please.fork",
