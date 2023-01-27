@@ -1,35 +1,82 @@
 {
-  "private": false,
-  "publishConfig": {
-    "access": "public"
-  },
-  "license": "ISC",
-  "version": "2.0.2",
-  "name": "@clevercanyon/spawn-please.fork",
-  "description": "Promisified child_process.spawn.",
-  "repository": "https://github.com/clevercanyon/spawn-please.fork",
-  "homepage": "https://github.com/clevercanyon/spawn-please.fork#readme",
-  "bugs": "https://github.com/clevercanyon/spawn-please.fork/issues",
-  "funding": "https://github.com/sponsors/clevercanyon",
-  "keywords": [
-    "clevercanyon"
-  ],
-  "author": {
-    "name": "Raine Revere",
-    "url": "https://github.com/raineorshine"
-  },
-  "contributors": [
-    {
-      "name": "Clever Canyon",
-      "url": "https://clevercanyon.com"
-    }
-  ],
-  "files": [
-    "/index.js"
-  ],
-  "main": "./index.js",
-  "unpkg": "./index.js",
-  "dependencies": {
-    "cross-spawn": "^7.0.3"
-  }
+	"private": false,
+	"publishConfig": {
+		"access": "public"
+	},
+	"version": "2.0.2",
+	"license": "ISC",
+	"name": "@clevercanyon/spawn-please.fork",
+	"description": "Promisified child_process.spawn.",
+	"repository": "https://github.com/clevercanyon/spawn-please.fork",
+	"homepage": "https://github.com/clevercanyon/spawn-please.fork#readme",
+	"bugs": "https://github.com/clevercanyon/spawn-please.fork/issues",
+	"funding": "https://github.com/sponsors/clevercanyon",
+	"keywords": ["clevercanyon"],
+	"author": {
+		"name": "Raine Revere",
+		"url": "https://github.com/raineorshine"
+	},
+	"contributors": [
+		{
+			"name": "Clever Canyon",
+			"url": "https://clevercanyon.com"
+		}
+	],
+	"type": "commonjs",
+	"files": ["/index.js"],
+	"bin": {},
+	"imports": {},
+	"exports": {
+		".": "./index.js"
+	},
+	"sideEffects": [],
+	"module": "",
+	"main": "./index.js",
+	"browser": "",
+	"unpkg": "./index.js",
+	"types": "",
+	"typesVersions": {},
+	"dependencies": {
+		"cross-spawn": "^7.0.3"
+	},
+	"peerDependencies": {},
+	"peerDependenciesMeta": {},
+	"optionalDependencies": {},
+	"bundleDependencies": [],
+	"devDependencies": {
+		"@clevercanyon/skeleton-dev-deps": "^1.0.91"
+	},
+	"overrides": {},
+	"workspaces": [],
+	"cpu": ["x64", "arm64"],
+	"os": ["darwin", "linux"],
+	"engines": {
+		"node": "^19.2.0 || ^19.4.0",
+		"npm": "^8.19.3 || ^9.2.0"
+	},
+	"config": {
+		"c10n": {
+			"&": {
+				"dotfiles": {
+					"lock": []
+				},
+				"build": {
+					"appType": "",
+					"targetEnv": ""
+				},
+				"github": {
+					"teams": {
+						"engineers": "pull",
+						"architects": "push"
+					},
+					"labels": {},
+					"configVersion": "",
+					"envsVersion": ""
+				},
+				"npmjs": {
+					"configVersions": ""
+				}
+			}
+		}
+	}
 }
