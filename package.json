@@ -11,9 +11,7 @@
 	"homepage": "https://github.com/clevercanyon/spawn-please.fork#readme",
 	"bugs": "https://github.com/clevercanyon/spawn-please.fork/issues",
 	"funding": "https://github.com/sponsors/clevercanyon",
-	"keywords": [
-		"clevercanyon"
-	],
+	"keywords": ["clevercanyon"],
 	"author": {
 		"name": "Raine Revere",
 		"url": "https://github.com/raineorshine"
@@ -25,9 +23,7 @@
 		}
 	],
 	"type": "commonjs",
-	"files": [
-		"/index.js"
-	],
+	"files": ["/index.js", "/index.d.ts"],
 	"bin": {},
 	"imports": {},
 	"exports": null,
@@ -50,14 +46,8 @@
 	},
 	"overrides": {},
 	"workspaces": [],
-	"cpu": [
-		"x64",
-		"arm64"
-	],
-	"os": [
-		"darwin",
-		"linux"
-	],
+	"cpu": ["x64", "arm64"],
+	"os": ["darwin", "linux"],
 	"engines": {
 		"node": "^19.2.0 || ^19.4.0",
 		"npm": "^8.19.3 || ^9.2.0"
