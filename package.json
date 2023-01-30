@@ -3,7 +3,7 @@
 	"publishConfig": {
 		"access": "public"
 	},
-	"version": "2.0.10",
+	"version": "2.0.11",
 	"license": "ISC",
 	"name": "@clevercanyon/spawn-please.fork",
 	"description": "Promisified child_process.spawn.",
@@ -42,7 +42,7 @@
 	"optionalDependencies": {},
 	"bundleDependencies": [],
 	"devDependencies": {
-		"@clevercanyon/skeleton-dev-deps": "^1.0.102"
+		"@clevercanyon/skeleton-dev-deps": "^1.0.103"
 	},
 	"overrides": {},
 	"workspaces": [],
@@ -68,11 +68,11 @@
 						"architects": "push"
 					},
 					"labels": {},
-					"configVersion": "1.0.1",
+					"configVersion": "1.0.2",
 					"envsVersion": ""
 				},
 				"npmjs": {
-					"configVersions": "1.0.1,1.0.0"
+					"configVersions": "1.0.2,1.0.2"
 				}
 			}
 		}
