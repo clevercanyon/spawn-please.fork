@@ -3,7 +3,7 @@
 	"publishConfig": {
 		"access": "public"
 	},
-	"version": "2.0.24",
+	"version": "2.0.25",
 	"license": "ISC",
 	"name": "@clevercanyon/spawn-please.fork",
 	"description": "Promisified child_process.spawn.",
@@ -42,7 +42,7 @@
 	"optionalDependencies": {},
 	"bundleDependencies": [],
 	"devDependencies": {
-		"@clevercanyon/skeleton-dev-deps": "^1.0.135"
+		"@clevercanyon/skeleton-dev-deps": "^1.0.136"
 	},
 	"overrides": {},
 	"cpu": ["x64", "arm64"],
