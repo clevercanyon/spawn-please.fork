@@ -3,7 +3,7 @@
     "publishConfig": {
         "access": "public"
     },
-    "version": "2.0.115",
+    "version": "2.0.116",
     "license": "ISC",
     "name": "@clevercanyon/spawn-please.fork",
     "description": "Promisified child_process.spawn.",
