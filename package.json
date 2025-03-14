@@ -3,7 +3,7 @@
     "publishConfig": {
         "access": "public"
     },
-    "version": "2.0.141",
+    "version": "2.0.142",
     "license": "ISC",
     "name": "@clevercanyon/spawn-please.fork",
     "description": "Promisified child_process.spawn.",
@@ -35,14 +35,14 @@
     "types": "./index.d.ts",
     "typesVersions": {},
     "dependencies": {
-        "cross-spawn": "^7.0.3"
+        "cross-spawn": "^7.0.6"
     },
     "peerDependencies": {},
     "peerDependenciesMeta": {},
     "optionalDependencies": {},
     "bundleDependencies": [],
     "devDependencies": {
-        "@clevercanyon/dev-deps": "^1.0.384"
+        "@clevercanyon/dev-deps": "^1.0.410"
     },
     "overrides": {},
     "cpu": ["x64", "arm64"],
